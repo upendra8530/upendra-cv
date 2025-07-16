@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upendra Nath Dubey - Professional CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 
+                        0 0 100px rgba(64, 224, 208, 0.1);
+            overflow: hidden;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2c2c2c 100%);
+            color: #ffffff;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(64, 224, 208, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #40E0D0, #00CED1, #20B2AA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(64, 224, 208, 0.5); }
+            to { text-shadow: 0 0 30px rgba(64, 224, 208, 0.8); }
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            color: #40E0D0;
+            animation: slideIn 1s ease-out 0.5s both;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(64, 224, 208, 0.1);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out 0.7s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .contact-info div:hover {
+            background: rgba(64, 224, 208, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(64, 224, 208, 0.3);
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: slideUp 0.8s ease-out both;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            font-size: 1.6em;
+            color: #40E0D0;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #40E0D0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #40E0D0, #00CED1);
+            animation: expand 2s ease-out;
+        }
+
+        @keyframes expand {
+            from { width: 0; }
+            to { width: 60px; }
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(145deg, #262626 0%, #1a1a1a 100%);
+            border-radius: 15px;
+            border-left: 4px solid #40E0D0;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(45deg, #40E0D0, #00CED1);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(64, 224, 208, 0.2);
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #40E0D0;
+            margin-bottom: 8px;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #00CED1;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .description li:hover {
+            color: #40E0D0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(64, 224, 208, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .skill:hover::before {
+            left: 100%;
+        }
+
+        .skill:hover {
+            background: linear-gradient(145deg, #40E0D0, #00CED1);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(64, 224, 208, 0.4);
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #d0d0d0;
+            text-align: justify;
+            padding: 20px;
+            background: rgba(64, 224, 208, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #40E0D0;
+        }
+
+        .portfolio-item {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
+            padding: 12px 20px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(64, 224, 208, 0.3);
+        }
+
+        .portfolio-item a {
+            color: #40E0D0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .portfolio-item a:hover {
+            color: #00CED1;
+        }
+
+        .hobbies-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .hobby-item {
+            padding: 15px 25px;
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border-radius: 20px;
+            border: 1px solid #333;
+            color: #40E0D0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .hobby-item:hover {
+            background: linear-gradient(145deg, #40E0D0, #00CED1);
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .content {
+                padding: 30px 25px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .skills {
+                gap: 10px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                background: white;
+            }
+            
+            .header {
+                background: #2c3e50 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .skill:hover, .experience-item:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <h1>Upendra Nath Dubey</h1>
+            <div class="title">Senior Web Designer & Frontend Developer</div>
+            <div class="contact-info">
+                <div>📧 undubey6@gmail.com</div>
+                <div>📱 +91 85306 31160</div>
+                <div>📍 Ahmedabad, Gujarat, India</div>
+                <div>💼 linkedin.com/in/upendra-nath-dubey-7294b4111</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <div class="summary">
+                    Creative and detail-oriented Web Designer & Frontend Developer with over 7 years of experience in designing responsive, SEO-optimized websites and landing pages. Skilled in modern design tools like Figma and Adobe XD, with strong proficiency in HTML, CSS, Bootstrap, Tailwind CSS, SCSS, WordPress, Shopify, React, and Next.js. Proven track record of leading technical migrations, optimizing web performance, and collaborating effectively with cross-functional teams.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Sr. Web Designer → Frontend Developer</div>
+                    <div class="company">Space-O Technologies</div>
+                    <div class="date">Feb 2022 - Present</div>
+                    <div class="description">
+                        Leading web design and frontend development projects with modern technologies.
+                        <ul>
+                            <li>Designed and developed responsive websites and landing pages using Figma, Adobe XD, WordPress, Bootstrap, and SCSS</li>
+                            <li>Led successful conversion to Next.js framework, resulting in improved performance metrics (FCP/LCP) and enhanced user experience</li>
+                            <li>Collaborated closely with marketing teams on multiple internal and client projects, ensuring brand consistency and technical excellence</li>
+                            <li>Implemented SEO optimization strategies and responsive design principles across all projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Senior Web Designer</div>
+                    <div class="company">STALWART DIGITAL</div>
+                    <div class="date">Aug 2019 - Feb 2022</div>
+                    <div class="description">
+                        Specialized in e-commerce solutions and high-converting landing pages.
+                        <ul>
+                            <li>Developed high-converting Shopify-based landing pages and e-commerce solutions</li>
+                            <li>Managed comprehensive client coordination and project delivery from concept to launch</li>
+                            <li>Utilized Photoshop, HTML/CSS, and responsive/mobile-first design techniques to create engaging user experiences</li>
+                            <li>Maintained strong client relationships and delivered projects within specified timelines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Web Designer</div>
+                    <div class="company">Siddhi Infosoft</div>
+                    <div class="date">May 2016 - Nov 2017</div>
+                    <div class="description">
+                        Foundation role building core web development skills across multiple platforms.
+                        <ul>
+                            <li>Developed responsive websites using Bootstrap, WordPress, Joomla, and Magento platforms</li>
+                            <li>Gained extensive hands-on experience with HTML/CSS and Photoshop in fast-paced project environments</li>
+                            <li>Contributed to multiple successful web projects while building foundational technical skills</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="job-title">Bachelor of Commerce (B.Com)</div>
+                    <div class="company">Jiwaji University</div>
+                    <div class="date">2013</div>
+                    <div class="description">
+                        Completed undergraduate degree with focus on commerce and business fundamentals.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Skills</h2>
+                <div class="skills">
+                    <div class="skill">HTML5 & CSS3</div>
+                    <div class="skill">Bootstrap</div>
+                    <div class="skill">Tailwind CSS</div>
+                    <div class="skill">SCSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">jQuery</div>
+                    <div class="skill">React.js</div>
+                    <div class="skill">Next.js</div>
+                    <div class="skill">WordPress</div>
+                    <div class="skill">Shopify</div>
+                    <div class="skill">Figma</div>
+                    <div class="skill">Adobe XD</div>
+                    <div class="skill">Photoshop</div>
+                    <div class="skill">Responsive Design</div>
+                    <div class="skill">SEO Optimization</div>
+                    <div class="skill">Performance Optimization</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Portfolio Highlights</h2>
+                
+                <div class="portfolio-item">
+                    <a href="https://www.spaceotechnologies.com/" target="_blank">Space-O Technologies</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.spaceo.ca/" target="_blank">SpaceO Canada</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.labsmedia.com/" target="_blank">Labs Media</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://www.daeken.com/" target="_blank">Daeken</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="http://fieldcamp.ai/" target="_blank">FieldCamp</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://foxcue.com/" target="_blank">Foxcue</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://fyule.io/" target="_blank">Fyule</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://lunya.co/" target="_blank">Lunya</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://undnlaqr.com/" target="_blank">UNDN LAQR</a>
+                </div>
+                <div class="portfolio-item">
+                    <a href="https://supercilium.com/" target="_blank">Supercilium</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Hobbies & Interests</h2>
+                <div class="hobbies-list">
+                    <div class="hobby-item">🎬 Watching Movies</div>
+                    <div class="hobby-item">🎵 Listening to Music</div>
+                    <div class="hobby-item">🏔️ Trekking</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
