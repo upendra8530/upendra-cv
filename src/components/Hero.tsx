@@ -63,7 +63,7 @@ const Hero = () => {
         >
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-              👋 Welcome to my portfolio
+              👋 Frontend Developer
             </span>
           </motion.div>
 

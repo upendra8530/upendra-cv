@@ -9,7 +9,7 @@ const Blog = () => {
     {
       title: 'Building Scalable React Applications with TypeScript',
       excerpt: 'Learn how to structure large React applications using TypeScript, custom hooks, and advanced patterns for maintainable code.',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop',
       date: '2024-01-15',
       readTime: '8 min read',
       category: 'React',
@@ -19,7 +19,7 @@ const Blog = () => {
     {
       title: 'Modern CSS Grid Layouts: A Complete Guide',
       excerpt: 'Master CSS Grid with practical examples and learn how to create responsive layouts that work across all devices.',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop',
       date: '2024-01-10',
       readTime: '6 min read',
       category: 'CSS',
@@ -182,68 +182,6 @@ const Blog = () => {
             </div>
           </motion.div>
 
-          {/* Recent Posts Grid */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-8">Recent Posts</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.filter(post => !post.featured).map((post, index) => (
-                <motion.article
-                  key={post.title}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
-                  className="group cursor-pointer"
-                >
-                  <Card className="h-full border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-medium">
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute top-3 left-3">
-                        <Badge variant="secondary" className="text-xs">
-                          {post.category}
-                        </Badge>
-                      </div>
-                    </div>
-                    <CardContent className="p-4">
-                      <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          {formatDate(post.date)}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
-                          {post.readTime}
-                        </div>
-                      </div>
-                      <h3 className="font-bold mb-2 group-hover:text-primary transition-colors leading-tight line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex flex-wrap gap-1">
-                        {post.tags.slice(0, 2).map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                        {post.tags.length > 2 && (
-                          <span className="px-2 py-1 text-muted-foreground text-xs">
-                            +{post.tags.length - 2}
-                          </span>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.article>
-              ))}
-            </div>
-          </motion.div>
 
           {/* Newsletter Signup */}
           <motion.div variants={itemVariants} className="mt-16">
