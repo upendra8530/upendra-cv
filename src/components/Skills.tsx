@@ -39,9 +39,7 @@ const Skills = () => {
         { name: 'WordPress', level: 92 },
         { name: 'Prismic CMS', level: 88 },
         { name: 'Shopify (Liquid)', level: 88 },
-        { name: 'Joomla', level: 75 },
-        { name: 'Magento', level: 70 },
-        { name: 'WooCommerce', level: 80 }
+        
       ]
     },
     {
@@ -54,7 +52,7 @@ const Skills = () => {
         { name: 'AI Design-to-Code', level: 85 },
         { name: 'Git & GitHub', level: 90 },
         { name: 'SCSS/Sass', level: 90 },
-        { name: 'Vite / Webpack', level: 82 }
+        { name: 'GSAP Animation', level: 82 }
       ]
     },
     {
@@ -67,7 +65,7 @@ const Skills = () => {
         { name: 'Lighthouse Optimization', level: 90 },
         { name: 'Web Performance', level: 92 },
         { name: 'Responsive / Mobile-first', level: 95 },
-        { name: 'Accessibility (a11y)', level: 80 }
+        { name: 'Cross-browser Testing', level: 85 }
       ]
     }
   ]
