@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code2, Palette, Database, Wrench, Globe, Smartphone } from 'lucide-react'
+import { Code2, Palette, Wrench, Globe, Smartphone } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Progress } from './ui/progress'
 
@@ -10,12 +10,12 @@ const Skills = () => {
       title: 'Frontend Development',
       color: 'text-blue-500',
       skills: [
-        { name: 'React.js', level: 95 },
-        { name: 'Next.js', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'JavaScript (ES6+)', level: 95 },
         { name: 'HTML5 & CSS3', level: 98 },
-        { name: 'Tailwind CSS', level: 90 }
+        { name: 'SCSS / Tailwind CSS', level: 95 },
+        { name: 'JavaScript & jQuery', level: 95 },
+        { name: 'Next.js', level: 92 },
+        { name: 'React', level: 90 },
+        { name: 'TypeScript', level: 85 }
       ]
     },
     {
@@ -23,25 +23,12 @@ const Skills = () => {
       title: 'Design & UI/UX',
       color: 'text-purple-500',
       skills: [
-        { name: 'Figma', level: 90 },
-        { name: 'Adobe XD', level: 85 },
-        { name: 'Photoshop', level: 80 },
-        { name: 'UI/UX Design', level: 85 },
+        { name: 'Figma', level: 92 },
+        { name: 'Adobe XD', level: 88 },
+        { name: 'Photoshop', level: 85 },
+        { name: 'Pixel-perfect Design', level: 95 },
         { name: 'Responsive Design', level: 95 },
-        { name: 'Design Systems', level: 88 }
-      ]
-    },
-    {
-      icon: Wrench,
-      title: 'Tools & Frameworks',
-      color: 'text-green-500',
-      skills: [
-        { name: 'Git & GitHub', level: 90 },
-        { name: 'Bootstrap', level: 95 },
-        { name: 'SCSS/Sass', level: 88 },
-        { name: 'Webpack', level: 75 },
-        { name: 'Vite', level: 85 },
-        { name: 'Framer Motion', level: 80 }
+        { name: 'Figma to HTML', level: 95 }
       ]
     },
     {
@@ -49,25 +36,25 @@ const Skills = () => {
       title: 'CMS & E-commerce',
       color: 'text-orange-500',
       skills: [
-        { name: 'WordPress', level: 90 },
-        { name: 'Shopify', level: 85 },
+        { name: 'WordPress', level: 92 },
+        { name: 'Prismic CMS', level: 88 },
+        { name: 'Shopify (Liquid)', level: 88 },
         { name: 'Joomla', level: 75 },
         { name: 'Magento', level: 70 },
-        { name: 'WooCommerce', level: 80 },
-        { name: 'Headless CMS', level: 75 }
+        { name: 'WooCommerce', level: 80 }
       ]
     },
     {
-      icon: Database,
-      title: 'Backend & Database',
-      color: 'text-red-500',
+      icon: Wrench,
+      title: 'AI & Productivity Tools',
+      color: 'text-green-500',
       skills: [
-        { name: 'Node.js', level: 75 },
-        { name: 'Express.js', level: 70 },
-        { name: 'MongoDB', level: 70 },
-        { name: 'MySQL', level: 75 },
-        { name: 'REST APIs', level: 80 },
-        { name: 'GraphQL', level: 65 }
+        { name: 'ChatGPT', level: 90 },
+        { name: 'Claude Code', level: 88 },
+        { name: 'AI Design-to-Code', level: 85 },
+        { name: 'Git & GitHub', level: 90 },
+        { name: 'SCSS/Sass', level: 90 },
+        { name: 'Vite / Webpack', level: 82 }
       ]
     },
     {
@@ -75,12 +62,12 @@ const Skills = () => {
       title: 'Performance & SEO',
       color: 'text-cyan-500',
       skills: [
-        { name: 'Web Performance', level: 90 },
-        { name: 'SEO Optimization', level: 85 },
-        { name: 'Lighthouse Optimization', level: 88 },
-        { name: 'Core Web Vitals', level: 85 },
-        { name: 'Accessibility (a11y)', level: 80 },
-        { name: 'Progressive Web Apps', level: 75 }
+        { name: 'Core Web Vitals', level: 92 },
+        { name: 'SEO Optimization', level: 88 },
+        { name: 'Lighthouse Optimization', level: 90 },
+        { name: 'Web Performance', level: 92 },
+        { name: 'Responsive / Mobile-first', level: 95 },
+        { name: 'Accessibility (a11y)', level: 80 }
       ]
     }
   ]
@@ -170,10 +157,10 @@ const Skills = () => {
           <motion.div variants={itemVariants} className="mt-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { number: '7+', label: 'Years Experience' },
+                { number: '9+', label: 'Years Experience' },
                 { number: '100+', label: 'Projects Completed' },
                 { number: '50+', label: 'Happy Clients' },
-                { number: '15+', label: 'Technologies Mastered' }
+                { number: '20+', label: 'Technologies Mastered' }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

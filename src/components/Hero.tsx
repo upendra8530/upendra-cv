@@ -63,7 +63,7 @@ const Hero = () => {
         >
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
-              👋 Frontend Developer
+              👋 Senior Frontend Developer & UI/UX Specialist
             </span>
           </motion.div>
 
@@ -79,17 +79,17 @@ const Hero = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed"
           >
-            Senior Frontend Developer & Web Designer
+            Senior Frontend Developer & UI/UX Specialist
             <br />
-            <span className="text-primary font-medium">7+ Years of Experience</span> in creating amazing web experiences
+            <span className="text-primary font-medium">9+ Years of Experience</span> building high-performance web applications
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
             className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Passionate about crafting beautiful, responsive websites and modern web applications 
-            using React, Next.js, and cutting-edge frontend technologies.
+            Expert in Next.js, Tailwind CSS, WordPress, Prismic CMS, and Shopify. 
+            Leveraging AI-assisted development to deliver scalable, pixel-perfect solutions.
           </motion.p>
 
           <motion.div

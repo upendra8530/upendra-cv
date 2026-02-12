@@ -16,7 +16,6 @@ const Footer = () => {
       { label: 'Experience', href: '#experience' },
       { label: 'Skills', href: '#skills' },
       { label: 'Projects', href: '#projects' },
-      { label: 'Blog', href: '#blog' },
       { label: 'Contact', href: '#contact' },
     ],
     services: [
@@ -50,10 +49,10 @@ const Footer = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-2xl font-bold text-gradient mb-4">Upendra Nath Dubey</h3>
+              <h3 className="text-2xl font-bold text-gradient mb-4">Upendra Nath Dubey</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-                  Senior Frontend Developer & Web Designer passionate about creating exceptional digital experiences 
-                  with modern web technologies and beautiful design.
+                  Senior Frontend Developer & UI/UX Specialist with 9+ years of experience building 
+                  high-performance, pixel-perfect web applications.
                 </p>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <span>Made with</span>

@@ -293,7 +293,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Languages:</span>
-                    <span className="font-medium">English, Hindi</span>
+                    <span className="font-medium">English, Hindi, Gujarati</span>
                   </div>
                 </div>
               </div>
