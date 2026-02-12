@@ -86,26 +86,26 @@ const About = () => {
             {/* About Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-2xl font-bold text-gradient">
-                Senior Frontend Developer & Web Designer
+                Senior Frontend Developer & UI/UX Specialist
               </h3>
               
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  With over <span className="text-primary font-semibold">7 years of experience</span> in web development, 
-                  I specialize in creating responsive, SEO-optimized websites and modern web applications that deliver 
+                  With over <span className="text-primary font-semibold">9+ years of experience</span> in web development, 
+                  I specialize in building high-performance, pixel-perfect, and fully responsive web applications that deliver 
                   exceptional user experiences.
                 </p>
                 
                 <p>
-                  Currently working as a Senior Web Designer → Frontend Developer at <span className="text-primary font-semibold">Space-O Technologies</span>, 
-                  where I lead technical migrations, optimize web performance, and collaborate with cross-functional teams 
-                  to deliver cutting-edge solutions.
+                  Currently working as a Senior Web Designer & Frontend Developer at <span className="text-primary font-semibold">Space-O Technologies</span>, 
+                  where I develop high-performance Next.js frontends integrated with WordPress and Prismic CMS, 
+                  and migrate legacy websites to modern stacks improving page speed by 45%.
                 </p>
                 
                 <p>
-                  My expertise spans from design tools like <span className="text-primary font-medium">Figma and Adobe XD</span> to 
-                  modern technologies including <span className="text-primary font-medium">React, Next.js, TypeScript, and Tailwind CSS</span>. 
-                  I'm passionate about staying current with the latest web technologies and best practices.
+                  I actively leverage <span className="text-primary font-medium">AI-assisted development tools</span> like 
+                  ChatGPT and Claude Code to accelerate development, improve code quality, and reduce turnaround time. 
+                  Proven success in <span className="text-primary font-medium">Core Web Vitals optimization</span> and modern frontend architecture.
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ const About = () => {
                 variants={itemVariants}
                 className="flex flex-wrap gap-3 pt-4"
               >
-                {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'WordPress'].map((tech) => (
+                {['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'WordPress', 'Prismic CMS', 'Shopify'].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20"

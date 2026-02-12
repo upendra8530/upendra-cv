@@ -5,47 +5,47 @@ import { Card, CardContent } from './ui/card'
 const Experience = () => {
   const experiences = [
     {
-      title: 'Sr. Web Designer → Frontend Developer',
+      title: 'Senior Web Designer & Frontend Developer',
       company: 'Space-O Technologies',
-      location: 'Gujarat, India',
+      location: 'Ahmedabad, India',
       period: 'Feb 2022 - Present',
       type: 'Full-time',
       achievements: [
-        'Led successful conversion to Next.js framework, improving FCP/LCP performance metrics',
-        'Designed and developed responsive websites and landing pages using Figma, Adobe XD, WordPress, Bootstrap, and SCSS',
-        'Collaborated closely with marketing teams on multiple internal and client projects',
-        'Implemented SEO optimization strategies and responsive design principles across all projects',
-        'Mentored junior developers and established frontend development best practices'
+        'Develop high-performance Next.js frontends integrated with WordPress and Prismic CMS',
+        'Migrate legacy WordPress websites to Next.js + Tailwind, improving page speed by 45%',
+        'Optimize Core Web Vitals (FCP <1.2s, LCP <2.0s)',
+        'Convert Figma/PSD designs to pixel-perfect, responsive UI',
+        'Utilize AI tools (ChatGPT, Claude Code) to speed up development and reduce repetitive tasks'
       ],
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Figma', 'Adobe XD', 'WordPress', 'Bootstrap', 'SCSS']
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'WordPress', 'Prismic CMS', 'Figma', 'AI Tools'],
+      keyProjects: ['Welco.ai', 'Fieldcamp.ai', 'Space-O Technologies', 'Space-O Canada', 'Foxcue', 'Labsmedia', 'Daeken', 'Fyule']
     },
     {
-      title: 'Senior Web Designer',
-      company: 'STALWART DIGITAL',
-      location: 'Remote',
+      title: 'Web Designer & Shopify Frontend Developer',
+      company: 'Stalwart Digital',
+      location: 'Ahmedabad, India',
       period: 'Aug 2019 - Feb 2022',
       type: 'Full-time',
       achievements: [
-        'Developed high-converting Shopify-based landing pages and e-commerce solutions',
-        'Managed comprehensive client coordination and project delivery from concept to launch',
-        'Utilized Photoshop, HTML/CSS, and responsive/mobile-first design techniques',
-        'Maintained strong client relationships and delivered projects within specified timelines',
-        'Increased client conversion rates by 35% through optimized landing page designs'
+        'Built 25+ custom Shopify websites using Liquid, SCSS, and JavaScript',
+        'Improved conversion rates by 22% through UI/UX enhancements',
+        'Designed 40+ high-converting landing pages',
+        'Managed comprehensive client coordination and project delivery from concept to launch'
       ],
-      technologies: ['Shopify', 'HTML/CSS', 'JavaScript', 'Photoshop', 'Responsive Design', 'E-commerce']
+      technologies: ['Shopify', 'Liquid', 'SCSS', 'JavaScript', 'HTML/CSS', 'Photoshop'],
+      keyProjects: ['Lunya', 'Undnlaqr', 'Supercilium', 'Megahires', 'Citibin']
     },
     {
       title: 'Web Designer',
       company: 'Siddhi Infosoft',
-      location: 'Gujarat, India',
-      period: 'May 2016 - Nov 2017',
+      location: 'Ahmedabad, India',
+      period: 'May 2016 - Jul 2019',
       type: 'Full-time',
       achievements: [
-        'Developed responsive websites using Bootstrap, WordPress, Joomla, and Magento platforms',
-        'Gained extensive hands-on experience with HTML/CSS and Photoshop in fast-paced project environment',
+        'Developed 30+ responsive websites using Bootstrap, WordPress, Joomla, Magento',
+        'Converted PSD designs to responsive HTML/CSS',
         'Built foundational skills in multiple CMS platforms and frontend frameworks',
-        'Collaborated with design and development teams to deliver client projects',
-        'Successfully completed 50+ website projects across various industries'
+        'Collaborated with design and development teams to deliver client projects'
       ],
       technologies: ['WordPress', 'Joomla', 'Magento', 'Bootstrap', 'HTML/CSS', 'Photoshop', 'jQuery']
     }
@@ -86,7 +86,7 @@ const Experience = () => {
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Experience</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A journey of growth, learning, and delivering exceptional web solutions across various industries
+              9+ years of delivering high-performance, pixel-perfect web solutions across various industries
             </p>
           </motion.div>
 
@@ -144,6 +144,22 @@ const Experience = () => {
                             </ul>
                           </div>
 
+                          {exp.keyProjects && (
+                            <div>
+                              <h4 className="font-semibold mb-3">Key Projects:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {exp.keyProjects.map((project) => (
+                                  <span
+                                    key={project}
+                                    className="px-3 py-1 bg-accent text-accent-foreground text-xs rounded-full border border-border"
+                                  >
+                                    {project}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
                           <div>
                             <h4 className="font-semibold mb-3">Technologies Used:</h4>
                             <div className="flex flex-wrap gap-2">
@@ -165,6 +181,17 @@ const Experience = () => {
               ))}
             </div>
           </div>
+
+          {/* Education */}
+          <motion.div variants={itemVariants} className="mt-16">
+            <h3 className="text-2xl font-bold text-center mb-8">Education</h3>
+            <Card className="border-border/50 max-w-md mx-auto">
+              <CardContent className="p-6 text-center">
+                <h4 className="text-lg font-bold text-primary mb-1">Bachelor of Commerce (B.Com)</h4>
+                <p className="text-muted-foreground">Jiwaji University, 2013</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         </motion.div>
       </div>
     </section>
